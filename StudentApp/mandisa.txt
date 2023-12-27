@@ -1,0 +1,3 @@
+anele,20
+akhona,18
+zenande,10

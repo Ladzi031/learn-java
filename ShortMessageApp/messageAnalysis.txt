@@ -1,0 +1,5 @@
+The length of the message in terms of bytes: 166 
+Number of words contained in the message: 3 
+Number of commas: 1 
+Number of full stops: 1 
+Number of white spaces: 2 
