@@ -1,0 +1,3 @@
+# how do Stateful session beans work?
+
+a simple app that shows how stateful session beans work...

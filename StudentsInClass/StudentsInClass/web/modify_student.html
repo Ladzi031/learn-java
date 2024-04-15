@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>update existing customer</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>update a student's surname</div>
+
+        <form action="ControllerServlet.do" method="POST">
+            <input type="hidden" name="op" value="update_student">
+            <table>
+                <tr>
+                    <td>student number: </td>
+                    <td> <input type="text" name="studentNumber" required> </td>
+                </tr>
+                <tr>
+                    <td>new surname: </td>
+                    <td> <input type="text" name="surname" required> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> <input type="submit" value="update student"> </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
