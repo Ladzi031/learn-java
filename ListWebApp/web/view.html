@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>view list</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>view numbers</div>
+        <p>please click the button to see a full list of numbers: </p>
+        <form action="ControllerServlet.do" method="POST">
+            <table>
+                <tr>
+                    <td> <input type="hidden" name="op" value="get_list"> </td>
+                    <td> <input type="submit"  value="get list"> </td>
+                </tr>
+            </table>
+        </form>
+        
+    </body>
+</html>
