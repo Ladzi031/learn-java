@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>MetersToInchesServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.MetersToInchesServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MetersToCentimetersServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.MetersToCentimetersServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>StartSessionServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.StartSessionServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MetersToInchesServlet</servlet-name>
+        <url-pattern>/MetersToInchesServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MetersToCentimetersServlet</servlet-name>
+        <url-pattern>/MetersToCentimetersServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>StartSessionServlet</servlet-name>
+        <url-pattern>/StartSessionServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/LogoutServlet.do</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <security-constraint>
+        <display-name>managerConstraint</display-name>
+        <web-resource-collection>
+            <web-resource-name>ManagerResources</web-resource-name>
+            <description>Resources accessible to a manager</description>
+            <url-pattern>/MetersToInchesServlet.do</url-pattern>
+            <url-pattern>/MetersToMillimetersServlet.do</url-pattern>
+            <url-pattern>/toInches.jsp</url-pattern>
+            <url-pattern>/toInches_outcome.jsp</url-pattern>
+            <url-pattern>/toMillis.jsp</url-pattern>
+            <url-pattern>/toMillis_outcome.jsp</url-pattern>
+        </web-resource-collection>
+        <web-resource-collection>
+            <web-resource-name>EmployeeConstraint</web-resource-name>
+            <description>Resources available to an Employee</description>
+            <url-pattern>/toMillis.jsp</url-pattern>
+            <url-pattern>/toMillis_outcome.jsp</url-pattern>
+            <url-pattern>/MetersToMillimetersServlet.do</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <description>Enable authentication of manager</description>
+            <role-name>manager</role-name>
+        </auth-constraint>
+    </security-constraint>
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <realm-name>FRealm</realm-name>
+        <form-login-config>
+            <form-login-page>/Login.jsp</form-login-page>
+            <form-error-page>/LoginError.jsp</form-error-page>
+        </form-login-config>
+    </login-config>
+    <security-role>
+        <description>a manager can convert meters to inches and millimeters</description>
+        <role-name>manager</role-name>
+    </security-role>
+    <security-role>
+        <description>An employee can convert meters to millimeters</description>
+        <role-name>employee</role-name>
+    </security-role>
+</web-app>
