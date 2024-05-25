@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Ladzani_fabian/Documents/NetBeansProjects/StudentTeacherWebApp/src/java/za/ac/tut/web/AddStudentServlet.java</file>
+            <file>file:/C:/Users/Ladzani_fabian/Documents/NetBeansProjects/StudentTeacherWebApp/src/java/za/ac/tut/web/FindStudentServlet.java</file>
+            <file>file:/C:/Users/Ladzani_fabian/Documents/NetBeansProjects/StudentTeacherWebApp/src/java/za/ac/tut/web/EditStudentServlet.java</file>
+            <file>file:/C:/Users/Ladzani_fabian/Documents/NetBeansProjects/StudentTeacherWebApp/src/java/za/ac/tut/web/GetAllStudentsServlet.java</file>
+            <file>file:/C:/Users/Ladzani_fabian/Documents/NetBeansProjects/StudentTeacherWebApp/web/addstudent_outcome.jsp</file>
+            <file>file:/C:/Users/Ladzani_fabian/Documents/NetBeansProjects/StudentTeacherWebApp/web/student_outcome.jsp</file>
+            <file>file:/C:/Users/Ladzani_fabian/Documents/NetBeansProjects/StudentTeacherWebApp/src/java/za/ac/tut/web/RemoveStudentServlet.java</file>
+            <file>file:/C:/Users/Ladzani_fabian/Documents/NetBeansProjects/StudentTeacherWebApp/web/removestudent_outcome.jsp</file>
+            <file>file:/C:/Users/Ladzani_fabian/Documents/NetBeansProjects/StudentTeacherWebApp/web/editstudent_outcome.jsp</file>
+            <file>file:/C:/Users/Ladzani_fabian/Documents/NetBeansProjects/StudentTeacherWebApp/web/getallstudents_outcome.jsp</file>
+            <file>file:/C:/Users/Ladzani_fabian/Documents/NetBeansProjects/StudentTeacherWebApp/web/studentfound.jsp</file>
+            <file>file:/C:/Users/Ladzani_fabian/Documents/NetBeansProjects/StudentTeacherWebApp/web/studentnotfound.jsp</file>
+        </group>
+    </open-files>
+</project-private>
