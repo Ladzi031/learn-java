@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>RecordTempServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.RecordTempServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControllerServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.ControllerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RecordTempServlet</servlet-name>
+        <url-pattern>/RecordTempServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/LogoutServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControllerServlet</servlet-name>
+        <url-pattern>/ControllerServlet.do</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    
+    <security-constraint>
+        <display-name>OfficerConstraint</display-name>
+        <web-resource-collection>
+            <web-resource-name>OfficerResources</web-resource-name>
+            <description>officer resources</description>
+            <url-pattern>/record.html</url-pattern>
+            <url-pattern>/RecordTempServlet.do</url-pattern>
+            <url-pattern>/record_outcome.jsp</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <description/>
+            <role-name>officer</role-name>
+        </auth-constraint>
+    </security-constraint>
+    <security-constraint>
+        <display-name>ManagerConstraint</display-name>
+        <web-resource-collection>
+            <web-resource-name>ManagerResources</web-resource-name>
+            <description>manager resources!</description>
+            <url-pattern>/high.html</url-pattern>
+            <url-pattern>/low.html</url-pattern>
+            <url-pattern>/occasion.html</url-pattern>
+            <url-pattern>/ControllerServlet.do</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <description/>
+            <role-name>manager</role-name>
+        </auth-constraint>
+    </security-constraint>
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <realm-name>file</realm-name>
+        <form-login-config>
+            <form-login-page>/login.jsp</form-login-page>
+            <form-error-page>/loginerror.jsp</form-error-page>
+        </form-login-config>
+    </login-config>
+    <security-role>
+        <description>officer role here!</description>
+        <role-name>officer</role-name>
+    </security-role>
+    <security-role>
+        <description>manager role here!</description>
+        <role-name>manager</role-name>
+    </security-role>
+</web-app>
